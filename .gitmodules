@@ -1,0 +1,3 @@
+[submodule "comfyui_voicebridge"]
+	path = comfyui_voicebridge
+	url = https://github.com/YanTianlong-01/comfyui_voicebridge.git
