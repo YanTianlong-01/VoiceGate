@@ -79,14 +79,24 @@ VoiceGate/
 
 ## 快速开始
 
-### 1. 克隆仓库（含子模块）
+### 方式一：在线体验（推荐）
+
+无需本地部署，直接在浏览器中开箱即用：
+
+👉 [RunningHub 在线工作流](https://www.runninghub.cn/ai-detail/2062372371004219393?inviteCode=rh-v1455)
+
+打开链接 → 点击"立即运行" → 上传视频 → 选择目标语言 → 一键生成配音
+
+### 方式二：本地部署
+
+#### 1. 克隆仓库（含子模块）
 
 ```bash
 git clone --recursive https://github.com/YanTianlong-01/VoiceGate.git
 cd VoiceGate
 ```
 
-### 2. 安装 ComfyUI 与依赖
+#### 2. 安装 ComfyUI 与依赖
 
 ```bash
 # 安装 ComfyUI
@@ -97,7 +107,7 @@ cd ComfyUI && pip install -r requirements.txt
 cp -r ../VoiceGate/comfyui_voicebridge custom_nodes/
 ```
 
-### 3. 加载工作流
+#### 3. 加载工作流
 
 将 `workflows/` 中的 JSON 文件拖入 ComfyUI，配置 API Key 后即可运行。
 
