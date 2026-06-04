@@ -16,14 +16,36 @@ VoiceGate 是基于 VoxCPM2 与 ComfyUI 构建的跨语言视频智能配音引�
 
 ## 技术架构
 
-```
-┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌─────────────┐
-│  VoiceBridge │     │   LLM 翻译    │     │  VoxCPM2     │     │ VoiceBridge │
-│  ASR 字幕提取 │────│  (字幕翻译)   │─────│  多语言 TTS  │─────│ SRT 对齐合并│
-└─────────────┘     └──────────────┘     └──────────────┘     └─────────────┘
-      │                                                                            │
-      ▼                                                                            ▼
-   输入视频                                                                    输出配音 + 字幕
+```mermaid
+flowchart LR
+    subgraph input [输入]
+        A[("🎬 输入视频")]
+    end
+
+    subgraph pipeline [处理流水线]
+        direction LR
+        B[("🎙️ VoiceBridge ASR<br/>字幕提取 + Forced Alignment")]
+        C[("🌐 LLM 翻译<br/>字幕跨语言翻译")]
+        D[("🔊 VoxCPM2 TTS<br/>多语言语音合成")]
+        E[("🎛️ VoiceBridge SRT 对齐<br/>时间戳驱动音频合并")]
+    end
+
+    subgraph output [输出]
+        F[("🎧 配音音频 + 同步字幕")]
+    end
+
+    A -->|"提取语音"| B
+    B -->|"SRT 字幕"| C
+    C -->|"翻译后文本"| D
+    D -->|"逐句音频"| E
+    E -->|"对齐合并"| F
+
+    classDef input fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef pipeline fill:#fff3e0,stroke:#f57c00,stroke-width:2px
+    classDef output fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
+    class A input
+    class B,C,D,E pipeline
+    class F output
 ```
 
 ### 核心模块
