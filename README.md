@@ -82,8 +82,11 @@ VoiceGate/
 ### 方式一：在线体验（推荐）
 
 无需本地部署，直接在浏览器中开箱即用：
+👉 [在线应用（音频版）](https://www.runninghub.cn/ai-detail/2062393040567885825?inviteCode=rh-v1455)
+👉 [在线应用（视频版）](https://www.runninghub.cn/ai-detail/2062395296264581121?inviteCode=rh-v1455)
 
-👉 [RunningHub 在线工作流](https://www.runninghub.cn/ai-detail/2062372371004219393?inviteCode=rh-v1455)
+👉 [ComfyUI 在线工作流（音频版）](https://www.runninghub.cn/post/2062391028543483906?inviteCode=rh-v1455)
+👉 [ComfyUI 在线工作流（视频版）](https://www.runninghub.cn/post/2062393264388530177?inviteCode=rh-v1455)
 
 打开链接 → 点击"立即运行" → 上传视频 → 选择目标语言 → 一键生成配音
 
