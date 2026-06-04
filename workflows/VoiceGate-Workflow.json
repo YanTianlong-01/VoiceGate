@@ -1,0 +1,4293 @@
+{
+  "id": "84fa3ca3-0dc0-4776-9191-b1f82b6d0f98",
+  "revision": 0,
+  "last_node_id": 268,
+  "last_link_id": 316,
+  "nodes": [
+    {
+      "id": 61,
+      "type": "easy showAnything",
+      "pos": [
+        3405.466552734375,
+        1242.3624267578125
+      ],
+      "size": [
+        264.173583984375,
+        244.0182647705078
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "1\n00:00:00,000 --> 00:00:04,000\n我相信你在各种内容下面应该都见过这样一句类似的评论\n\n2\n00:00:04,240 --> 00:00:04,960\n那几个月之前\n\n3\n00:00:04,960 --> 00:00:06,879\n其实大家把这个当成一种调侃了\n\n4\n00:00:06,879 --> 00:00:07,679\n是一种梗\n\n5\n00:00:07,679 --> 00:00:07,919\n对吧\n\n6\n00:00:08,160 --> 00:00:09,359\n你看到太离谱的东西\n\n7\n00:00:09,439 --> 00:00:10,320\n你会说\n\n8\n00:00:10,320 --> 00:00:10,800\n“哎呀\n\n9\n00:00:10,800 --> 00:00:12,560\n这是AI或者AI太好用了\n\n10\n00:00:12,560 --> 00:00:12,960\n家人\n\n11\n00:00:13,359 --> 00:00:14,240\n”但有意思的就是\n\n12\n00:00:14,240 --> 00:00:15,359\n只过了短短几个月\n\n13\n00:00:15,519 --> 00:00:19,519\n你会发现现在这句“这是AI嘛”背后的情绪它变化了\n\n14\n00:00:19,839 --> 00:00:21,280\n因为AI它又变强了\n\n"
+      ]
+    },
+    {
+      "id": 121,
+      "type": "SetNode",
+      "pos": [
+        3027.077392578125,
+        1938.8333740234375
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "LIST",
+          "name": "LIST",
+          "type": "LIST",
+          "link": 166
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_forced_aligns",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "forced_aligns",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "forced_aligns"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "SetNode",
+      "pos": [
+        3031.775634765625,
+        2067.592041015625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_text",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "text",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "text"
+      ]
+    },
+    {
+      "id": 123,
+      "type": "SetNode",
+      "pos": [
+        3030.826416015625,
+        2188.187744140625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "link": 168
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_language",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "language",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "language"
+      ]
+    },
+    {
+      "id": 124,
+      "type": "GetNode",
+      "pos": [
+        3154.44189453125,
+        988.6742553710938
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "LIST",
+          "name": "LIST",
+          "type": "LIST",
+          "links": [
+            169
+          ]
+        }
+      ],
+      "title": "Get_forced_aligns",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "forced_aligns"
+      ]
+    },
+    {
+      "id": 126,
+      "type": "GetNode",
+      "pos": [
+        3150.58349609375,
+        1269.900146484375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            171
+          ]
+        }
+      ],
+      "title": "Get_language",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "language"
+      ]
+    },
+    {
+      "id": 109,
+      "type": "ReplaceText",
+      "pos": [
+        3926.60693359375,
+        1252.896728515625
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "widget": {
+            "name": "texts"
+          },
+          "link": 149
+        },
+        {
+          "label": "find",
+          "name": "find",
+          "type": "STRING",
+          "widget": {
+            "name": "find"
+          }
+        },
+        {
+          "label": "replace",
+          "name": "replace",
+          "type": "STRING",
+          "widget": {
+            "name": "replace"
+          },
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "label": "texts",
+          "name": "texts",
+          "type": "STRING",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReplaceText",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        "[Language]",
+        "English"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "SetNode",
+      "pos": [
+        4682.775390625,
+        1325.0826416015625
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_Translated SRT",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Translated SRT",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Translated SRT"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "GetNode",
+      "pos": [
+        3157.4619140625,
+        1134.2364501953125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            170
+          ]
+        }
+      ],
+      "title": "Get_text",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "text"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "VoiceBridgeASRLoader",
+      "pos": [
+        2285.4912109375,
+        1969.413330078125
+      ],
+      "size": [
+        285.716796875,
+        226
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "repo_id",
+          "name": "repo_id",
+          "type": "COMBO",
+          "widget": {
+            "name": "repo_id"
+          }
+        },
+        {
+          "label": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          }
+        },
+        {
+          "label": "attention",
+          "name": "attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          }
+        },
+        {
+          "label": "max_new_tokens",
+          "name": "max_new_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          }
+        },
+        {
+          "label": "forced_aligner",
+          "name": "forced_aligner",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "forced_aligner"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "links": [
+            208,
+            209
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRLoader",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "forced_aligner": true,
+          "max_new_tokens": true,
+          "precision": true,
+          "attention": true
+        }
+      },
+      "widgets_values": [
+        "Qwen/Qwen3-ASR-1.7B",
+        "bf16",
+        "flash_attention_2",
+        1024,
+        "Qwen/Qwen3-ForcedAligner-0.6B"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "SetNode",
+      "pos": [
+        3022.862548828125,
+        1773.826416015625
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_Reference text",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Reference text",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Reference text"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "easy showAnything",
+      "pos": [
+        4673.2158203125,
+        978.5053100585938
+      ],
+      "size": [
+        339.7774963378906,
+        289.5758972167969
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "1\n00:00:00,000 --> 00:00:04,000\nI bet you've seen a comment like this under all kinds of content.\n\n2\n00:00:04,240 --> 00:00:04,960\nA few months ago,\n\n3\n00:00:04,960 --> 00:00:06,879\neveryone used it as a joke.\n\n4\n00:00:06,879 --> 00:00:07,679\nIt was a meme.\n\n5\n00:00:07,679 --> 00:00:07,919\nRight?\n\n6\n00:00:08,160 --> 00:00:09,359\nYou see something absurd.\n\n7\n00:00:09,439 --> 00:00:10,320\nYou'd say,\n\n8\n00:00:10,320 --> 00:00:10,800\n\"Ah,\n\n9\n00:00:10,800 --> 00:00:12,560\nmust be AI, or AI is too good.\n\n10\n00:00:12,560 --> 00:00:12,960\nBro.\"\n\n11\n00:00:13,359 --> 00:00:14,240\nBut the interesting thing is,\n\n12\n00:00:14,240 --> 00:00:15,359\njust a few months later,\n\n13\n00:00:15,519 --> 00:00:19,519\nnow the emotion behind \"Is this AI?\" has changed.\n\n14\n00:00:19,839 --> 00:00:21,280\nBecause AI has gotten even stronger."
+      ]
+    },
+    {
+      "id": 117,
+      "type": "SetNode",
+      "pos": [
+        3005.62646484375,
+        1654.7073974609375
+      ],
+      "size": [
+        218.11972045898438,
+        60
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_Original reference audio",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Original reference audio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Original reference audio"
+      ]
+    },
+    {
+      "id": 149,
+      "type": "Note",
+      "pos": [
+        2257.952880859375,
+        989.4893188476562
+      ],
+      "size": [
+        287.9577941894531,
+        100.70368194580078
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "加载你的原始音频，他会自动分离出纯人类的声音\n\nLoad your original audio and it will automatically separate out the pure human voices."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 96,
+      "type": "MelBandRoFormerModelLoader",
+      "pos": [
+        2559.361083984375,
+        1033.3271484375
+      ],
+      "size": [
+        256.2164001464844,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "links": [
+            137
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerModelLoader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "MelBandRoFormer_comfy/MelBandRoformer_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 164,
+      "type": "SetNode",
+      "pos": [
+        2839.226806640625,
+        1224.4898681640625
+      ],
+      "size": [
+        223.57479858398438,
+        58
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "link": 199
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_Ambient sound",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Ambient sound",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Ambient sound"
+      ]
+    },
+    {
+      "id": 115,
+      "type": "SetNode",
+      "pos": [
+        2840.291259765625,
+        1104.8675537109375
+      ],
+      "size": [
+        223.57479858398438,
+        60
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "label": "*",
+          "name": "*",
+          "type": "*"
+        }
+      ],
+      "title": "Set_Separated human voices",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Separated human voices",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Separated human voices"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "VoiceBridgeASRTranscribe",
+      "pos": [
+        2613.611328125,
+        1966.503173828125
+      ],
+      "size": [
+        339.7463073730469,
+        196
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "link": 209
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 161
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          }
+        },
+        {
+          "label": "context",
+          "name": "context",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "context"
+          }
+        },
+        {
+          "label": "return_timestamps",
+          "name": "return_timestamps",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "return_timestamps"
+          }
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "QWEN3_ASR_MODEL"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "links": [
+            166
+          ]
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            167
+          ]
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING",
+          "links": [
+            168
+          ]
+        },
+        {
+          "label": "timestamps",
+          "name": "timestamps",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRTranscribe",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "context": true,
+          "language": true,
+          "return_timestamps": true
+        }
+      },
+      "widgets_values": [
+        "auto",
+        "",
+        true
+      ]
+    },
+    {
+      "id": 36,
+      "type": "GenerateSRT",
+      "pos": [
+        3394.440185546875,
+        988.6742553710938
+      ],
+      "size": [
+        272.1141662597656,
+        187.92388916015625
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "link": 169
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 170
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING",
+          "widget": {
+            "name": "language"
+          },
+          "link": 171
+        },
+        {
+          "label": "save_srt",
+          "name": "save_srt",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_srt"
+          }
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "srt_string",
+          "name": "srt_string",
+          "type": "STRING",
+          "links": [
+            104,
+            146
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GenerateSRT",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "text": true
+        }
+      },
+      "widgets_values": [
+        "",
+        "",
+        true,
+        "VoiceBridge/subtitle"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "CR Text",
+      "pos": [
+        3750.109375,
+        984.0011596679688
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "*",
+          "links": [
+            149
+          ]
+        },
+        {
+          "label": "show_help",
+          "name": "show_help",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Text",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "You are a professional subtitle translator. Please translate all the subtitles in this SRT file into natural, spoken [Language]. Keep each timestamp exactly the same. For each subtitle line, use the shortest possible phrasing that still captures the original meaning (it doesn't have to be a direct translation, just convey the correct idea). Output the content directly in SRT format, without any explanation or descriptive text."
+      ]
+    },
+    {
+      "id": 128,
+      "type": "Note",
+      "pos": [
+        2280.927490234375,
+        1437.8023681640625
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "            ↑↑↑↑\n      在这里输入你的目标语言\n\n  Input your target language here"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 215,
+      "type": "MelBandRoFormerSampler",
+      "pos": [
+        2680.94921875,
+        3011.865966796875
+      ],
+      "size": [
+        231.27206420898438,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 31,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "link": 254
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 256
+        }
+      ],
+      "outputs": [
+        {
+          "label": "vocals",
+          "name": "vocals",
+          "type": "AUDIO",
+          "links": [
+            255
+          ]
+        },
+        {
+          "label": "instruments",
+          "name": "instruments",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerSampler",
+        "cnr_id": "ComfyUI-MelBandRoFormer",
+        "ver": "b40e263224778ec417114d91d8b3b39934e30de5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 198,
+      "type": "VoiceBridgeASRLoader",
+      "pos": [
+        2965.889892578125,
+        2995.493408203125
+      ],
+      "size": [
+        285.716796875,
+        226
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "repo_id",
+          "name": "repo_id",
+          "type": "COMBO",
+          "widget": {
+            "name": "repo_id"
+          }
+        },
+        {
+          "label": "precision",
+          "name": "precision",
+          "type": "COMBO",
+          "widget": {
+            "name": "precision"
+          }
+        },
+        {
+          "label": "attention",
+          "name": "attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "attention"
+          }
+        },
+        {
+          "label": "max_new_tokens",
+          "name": "max_new_tokens",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          }
+        },
+        {
+          "label": "forced_aligner",
+          "name": "forced_aligner",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "forced_aligner"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "links": [
+            243
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRLoader",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "forced_aligner": true,
+          "max_new_tokens": true,
+          "precision": true,
+          "attention": true
+        }
+      },
+      "widgets_values": [
+        "Qwen/Qwen3-ASR-1.7B",
+        "bf16",
+        "flash_attention_2",
+        1024,
+        "Qwen/Qwen3-ForcedAligner-0.6B"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 202,
+      "type": "VoiceBridgeASRTranscribe",
+      "pos": [
+        3322.212890625,
+        2996.067138671875
+      ],
+      "size": [
+        339.7463073730469,
+        196
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "link": 243
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 255
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          }
+        },
+        {
+          "label": "context",
+          "name": "context",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "context"
+          }
+        },
+        {
+          "label": "return_timestamps",
+          "name": "return_timestamps",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "return_timestamps"
+          }
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "QWEN3_ASR_MODEL"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "links": [
+            239
+          ]
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            240
+          ]
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING",
+          "links": [
+            241
+          ]
+        },
+        {
+          "label": "timestamps",
+          "name": "timestamps",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRTranscribe",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "context": true,
+          "language": true,
+          "return_timestamps": true
+        }
+      },
+      "widgets_values": [
+        "auto",
+        "",
+        true
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 200,
+      "type": "GenerateSRT",
+      "pos": [
+        3712.6494140625,
+        2997.569580078125
+      ],
+      "size": [
+        272.1141662597656,
+        187.92388916015625
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "link": 239
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 240
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING",
+          "widget": {
+            "name": "language"
+          },
+          "link": 241
+        },
+        {
+          "label": "save_srt",
+          "name": "save_srt",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_srt"
+          }
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "srt_string",
+          "name": "srt_string",
+          "type": "STRING",
+          "links": [
+            242
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GenerateSRT",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "text": true
+        }
+      },
+      "widgets_values": [
+        "",
+        "",
+        true,
+        "VoiceBridge/subtitle"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 201,
+      "type": "easy showAnything",
+      "pos": [
+        4045.969970703125,
+        2993.702392578125
+      ],
+      "size": [
+        356.7189025878906,
+        272.81671142578125
+      ],
+      "flags": {},
+      "order": 61,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 242
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "1\n00:00:00,320 --> 00:00:01,120\nHello 大家好\n\n2\n00:00:01,120 --> 00:00:02,160\n我是Sam\n\n3\n00:00:01,439 --> 00:00:02,160\nFeeling\n\n4\n00:00:02,640 --> 00:00:07,280\n今天给大家介绍一下免魔法、免登录的Codex安装教程\n\n5\n00:00:07,599 --> 00:00:10,720\n首先来说一下为什么我们会选择Codex\n\n6\n00:00:10,800 --> 00:00:14,960\n而不是Cloud Code或者Open Cloud这些Agent\n\n7\n00:00:15,439 --> 00:00:17,199\n首先跟Cloud Code对比的话\n\n8\n00:00:17,199 --> 00:00:18,800\nCodex是开源的\n\n9\n00:00:18,800 --> 00:00:23,920\n可以看到我们这个Github上Codex幺幺一直是开源的\n\n10\n00:00:24,480 --> 00:00:27,839\n虽然说Cloud Code之前的源码被泄露过\n\n11\n00:00:27,839 --> 00:00:32,560\n但是后续的更新在泄露版里面是没法支持的\n\n12\n00:00:32,640 --> 00:00:39,359\n也就是说在泄露的开源版本的Cloud Code里面是没有办法使用我们最新的特性的\n\n13\n00:00:39,840 --> 00:00:40,159\n呃\n\n14\n00:00:40,159 --> 00:00:41,600\nCodex一直是开源的\n\n15\n00:00:41,600 --> 00:00:45,920\n所以开源版本都是支持我们的最新特性的\n\n16\n00:00:46,560 --> 00:00:49,119\n那么在开源Agent里面呢\n\n17\n00:00:49,119 --> 00:00:53,039\n我们还可以选择Open Open Cloud和Hermes Agent\n\n18\n00:00:54,079 --> 00:00:59,920\n但是Open Cloud和Hermes Agent这两个Agent安装都需要命令行\n\n19\n00:01:00,399 --> 00:01:05,519\n没法像Codex一样给出一个安装程序包就可以安装\n\n20\n00:01:06,159 --> 00:01:06,959\n还有一点是\n\n21\n00:01:06,959 --> 00:01:09,280\n如果你本来就是程序员的话\n\n22\n00:01:09,680 --> 00:01:11,200\n你是要正经写代码的\n\n23\n00:01:11,760 --> 00:01:14,480\n那肯定是优先选Cloud Code和Codex\n\n24\n00:01:14,560 --> 00:01:18,719\n而不是Hermes Agent和Open Cloud\n\n25\n00:01:16,959 --> 00:01:20,319\nCodex不仅可以处理代码\n\n26\n00:01:20,319 --> 00:01:23,599\n如果大家是非代码专业的话\n\n27\n00:01:23,840 --> 00:01:27,120\n其实Codex还可以帮我们自动处理很多文档\n\n28\n00:01:27,359 --> 00:01:28,719\n当你用过之后就回不去了\n\n29\n00:01:29,200 --> 00:01:36,400\n还有一点就是Codex现在已经支持了Open Cloud和Hermes Agent里面的记忆和自进化的功能\n\n30\n00:01:36,879 --> 00:01:37,040\n好\n\n31\n00:01:37,040 --> 00:01:41,120\n现在我们来安装一下MacOS端的Codex\n\n32\n00:01:41,120 --> 00:01:44,239\n现在我先把我旧的Codex全部卸载掉\n\n33\n00:01:45,680 --> 00:01:48,000\n保证我们环境是干净的\n\n34\n00:01:49,840 --> 00:01:50,079\n好\n\n35\n00:01:50,159 --> 00:01:51,599\n这里已经卸卸载完了\n\n36\n00:01:52,159 --> 00:01:54,319\n我们先运行这个Codex\n\n37\n00:01:56,319 --> 00:01:59,599\n然后把它拖进应用程序安装一下\n\n38\n00:02:04,000 --> 00:02:04,239\n好\n\n39\n00:02:04,239 --> 00:02:04,959\n安装好了\n\n40\n00:02:06,239 --> 00:02:09,039\n然后我们再安安装这个Codex 大家好\n\n41\n00:02:09,039 --> 00:02:13,599\n这里弹出一个两个程序我们都需要安装的\n\n42\n00:02:14,080 --> 00:02:16,240\n然后我们点击应用程序\n\n43\n00:02:17,120 --> 00:02:19,599\n然后把这两个粘贴过来\n\n44\n00:02:20,319 --> 00:02:21,360\n粘贴到应用程序这里\n\n45\n00:02:22,479 --> 00:02:22,879\n好\n\n46\n00:02:23,120 --> 00:02:23,520\n粘贴完了\n\n47\n00:02:23,599 --> 00:02:25,199\n我们点击运行\n\n48\n00:02:26,400 --> 00:02:26,639\n好\n\n49\n00:02:26,639 --> 00:02:30,080\n可以看到我们这个是显示是文件转换\n\n50\n00:02:30,879 --> 00:02:33,599\n这是我们打开我们的终端\n\n51\n00:02:34,479 --> 00:02:35,280\n稍等片刻\n\n52\n00:02:38,479 --> 00:02:38,719\n好\n\n53\n00:02:38,719 --> 00:02:40,800\n我们终端已经打开出来了\n\n54\n00:02:41,439 --> 00:02:43,520\n然后我们点击一下这个\n\n55\n00:02:43,520 --> 00:02:45,360\n然后把这个终端拖过来这边\n\n56\n00:02:46,000 --> 00:02:46,240\n输\n\n57\n00:02:46,400 --> 00:02:52,000\n然后我们在这里输一个命令x a t t r g c r空格\n\n58\n00:02:52,240 --> 00:02:53,599\n记得这里一定要加一个空格\n\n59\n00:02:54,400 --> 00:02:57,520\n然后我们选中这两个程序\n\n60\n00:02:57,680 --> 00:02:58,479\n把它拖进来\n\n61\n00:02:59,110 --> 00:03:00,070\n然后再点下回车\n\n62\n00:03:00,070 --> 00:03:00,471\n好\n\n63\n00:03:00,790 --> 00:03:03,191\n这里没有报错就说明你已经执行成功了\n\n64\n00:03:03,751 --> 00:03:05,670\n这时候我们再点击一下\n\n65\n00:03:05,830 --> 00:03:06,871\n先把这个取消掉\n\n66\n00:03:07,270 --> 00:03:08,550\n这时候我们再点击一下\n\n67\n00:03:09,830 --> 00:03:11,591\n可以看到我们已经启动起来了\n\n68\n00:03:13,191 --> 00:03:15,270\n我这里调成一个白天模式\n\n69\n00:03:15,911 --> 00:03:18,070\n然后我们点击这个模型提供商\n\n70\n00:03:18,950 --> 00:03:19,591\n添加\n\n71\n00:03:20,950 --> 00:03:22,471\n提供商我们用 D C\n\n72\n00:03:23,991 --> 00:03:25,591\n因为前几天 D C\n\n73\n00:03:27,350 --> 00:03:32,471\n因为昨天 D C 刚刚宣布它的 V4 Pro 永久降价了\n\n74\n00:03:32,871 --> 00:03:34,711\n一直都是保持二点五折\n\n75\n00:03:35,991 --> 00:03:38,151\n我们这里选择选 A P I\n\n76\n00:03:38,871 --> 00:03:40,230\n测试模型的话\n\n77\n00:03:40,950 --> 00:03:47,431\n我们随便填一个 D C V4 的 Flash 吧\n\n78\n00:03:48,871 --> 00:03:49,911\n注意这里一定要小写\n\n79\n00:03:51,431 --> 00:03:58,151\n然后这个 Base URL 就是我们 D C 官方的一个地址\n\n80\n00:03:59,830 --> 00:04:05,350\nA P I key 也是从我们官方的 D C A P I 的平台获取\n\n81\n00:04:06,151 --> 00:04:09,270\n然后我们这里一定要选择这个 Chat 模式\n\n82\n00:04:10,631 --> 00:04:11,350\n保存一下\n\n83\n00:04:14,390 --> 00:04:17,190\n然后我们这里选择使用我们刚刚配置好的\n\n84\n00:04:17,911 --> 00:04:19,190\n我们在这里测试一下\n\n85\n00:04:20,071 --> 00:04:20,310\n好\n\n86\n00:04:20,310 --> 00:04:21,110\n已经测试成功\n\n87\n00:04:21,110 --> 00:04:22,550\n说明我们这个配置完成\n\n88\n00:04:23,670 --> 00:04:25,271\n这时候我们再回到这里\n\n89\n00:04:25,430 --> 00:04:27,911\n点击启动 Codex 加加\n\n90\n00:04:32,151 --> 00:04:32,711\n打开\n\n91\n00:04:36,630 --> 00:04:36,870\n好\n\n92\n00:04:36,870 --> 00:04:39,511\n可以看到我们这已经打开成功打开 Codex 了\n\n93\n00:04:40,550 --> 00:04:43,110\n我们这个把这个点击删除就好了\n\n94\n00:04:43,591 --> 00:04:43,750\n好\n\n95\n00:04:43,750 --> 00:04:46,790\n可以看到我们这已经配置好了 V4\n\n96\n00:04:47,591 --> 00:04:50,310\n而且我们可以是自己选择 Flash Pro Pro 的\n\n97\n00:04:50,391 --> 00:04:55,190\n因为它通过你的 Base URL 会自动识别里面有什么模型\n\n98\n00:04:56,071 --> 00:04:58,071\n我们简简单进行一个测试一下\n\n99\n00:05:03,990 --> 00:05:04,151\n好\n\n100\n00:05:04,151 --> 00:05:07,350\n可以看到我们这里已经完全配置成功了\n\n101\n00:05:08,071 --> 00:05:14,471\n我们在整个过程中是没有使用任何魔法以及无需登录 Open A I 的官方账号的\n\n102\n00:05:15,911 --> 00:05:16,071\n好\n\n103\n00:05:16,071 --> 00:05:19,750\n现在我们开始一个 Windows 版的 Codex 安装\n\n104\n00:05:19,750 --> 00:05:20,310\n可以看到\n\n105\n00:05:21,031 --> 00:05:23,911\n我们现在这个 Codex 已经是已经卸载干净了\n\n106\n00:05:24,071 --> 00:05:25,430\n已经没有 Codex 这个程序\n\n107\n00:05:25,990 --> 00:05:27,511\n然后这两个安装包的话\n\n108\n00:05:27,511 --> 00:05:30,151\n可以在我简介区的网盘获取\n\n109\n00:05:30,630 --> 00:05:31,990\n我在网盘会分享给大家\n\n110\n00:05:33,670 --> 00:05:33,990\n好\n\n111\n00:05:34,630 --> 00:05:37,031\n我们先安装一下 Codex 本体\n\n112\n00:05:37,350 --> 00:05:38,071\n双击一下\n\n113\n00:05:57,149 --> 00:05:57,389\n好\n\n114\n00:05:57,389 --> 00:05:59,709\n可以看到我们这个是已经安装完成了\n\n115\n00:06:00,189 --> 00:06:03,548\n然后我们再安装我们的 Codex 加加\n\n116\n00:06:09,788 --> 00:06:10,269\n好\n\n117\n00:06:10,509 --> 00:06:13,149\n这样就已经是安装完成我们 Codex 加加了\n\n118\n00:06:15,228 --> 00:06:20,668\n搜索 Codex 加加启动管理器工具\n\n119\n00:06:20,749 --> 00:06:22,189\n我们启动这个\n\n120\n00:06:27,548 --> 00:06:30,108\n然后我们点击供应商配置\n\n121\n00:06:32,269 --> 00:06:33,548\n我们添加一下供应商\n\n122\n00:06:35,709 --> 00:06:37,309\n还是用我们的 Deepseek\n\n123\n00:06:40,269 --> 00:06:44,588\n因为 Deepseek 昨天刚宣布它的 V4 Pro 永久降价\n\n124\n00:06:45,709 --> 00:06:46,988\n我们这里选择纯 API\n\n125\n00:06:47,228 --> 00:06:52,668\n然后这里我们写一个 Deepseek V4 的 Flash 吧\n\n126\n00:06:56,988 --> 00:07:00,668\nUI 要就输我们 Deepseek 的 API 官方地址\n\n127\n00:07:03,149 --> 00:07:08,749\n密钥的话需要我们从 Deepseek 官方获取\n\n128\n00:07:10,108 --> 00:07:12,509\n然后我们再选择 Chat 模式\n\n129\n00:07:12,908 --> 00:07:13,788\n选择保存\n\n130\n00:07:15,069 --> 00:07:20,028\n然后我们这里使用我们刚刚配置好的一个供应商\n\n131\n00:07:20,988 --> 00:07:21,869\n我们测试一下\n\n132\n00:07:21,949 --> 00:07:22,269\n好\n\n133\n00:07:22,269 --> 00:07:23,468\n这里已经测试成功\n\n134\n00:07:25,949 --> 00:07:26,908\n回到概览\n\n135\n00:07:26,908 --> 00:07:28,509\n我们启动 Codex 加加\n\n136\n00:07:41,228 --> 00:07:42,028\n稍等一会儿\n\n137\n00:07:44,749 --> 00:07:48,829\n如果遇到这种等了很久还不行的情况的话\n\n138\n00:07:49,228 --> 00:07:51,788\n我们先关闭我们的 Codex 加加\n\n139\n00:07:52,348 --> 00:07:56,028\n然后再关闭我们这个管理器\n\n140\n00:07:56,509 --> 00:07:57,389\n再重启一下\n\n141\n00:08:02,108 --> 00:08:05,949\n我们点击重启 Codex\n\n142\n00:08:10,509 --> 00:08:10,509\n好\n\n143\n00:08:12,588 --> 00:08:13,788\n可以看到我们已经进来了\n\n144\n00:08:14,028 --> 00:08:17,629\n我们随便发一个请求\n\n145\n00:08:23,629 --> 00:08:23,709\n好\n\n146\n00:08:23,709 --> 00:08:25,949\n可以看到我们已经成功配置好了\n\n147\n00:08:26,108 --> 00:08:26,908\n在整个过程中\n\n148\n00:08:26,908 --> 00:08:28,588\n我们是没有使用任何魔法\n\n149\n00:08:29,149 --> 00:08:31,468\n以及无需登录 OpenAI 账号的\n\n150\n00:08:32,589 --> 00:08:36,509\n我们的 Windows 版和 Mac OS 版都提供了相应的教程\n\n151\n00:08:36,828 --> 00:08:40,908\n然后相应的安装包也会在评论区的简介给出来\n\n152\n00:08:41,389 --> 00:08:42,828\n大家自取就可以\n\n153\n00:08:43,308 --> 00:08:45,389\n我们这期视频先到这\n\n154\n00:08:45,389 --> 00:08:46,509\n下期视频再见\n\n"
+      ]
+    },
+    {
+      "id": 216,
+      "type": "MelBandRoFormerModelLoader",
+      "pos": [
+        2367.10546875,
+        2955.939208984375
+      ],
+      "size": [
+        256.2164001464844,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "links": [
+            254
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerModelLoader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "MelBandRoFormer_comfy/MelBandRoformer_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 219,
+      "type": "MelBandRoFormerModelLoader",
+      "pos": [
+        2364.743408203125,
+        3643.93505859375
+      ],
+      "size": [
+        256.2164001464844,
+        58
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "links": [
+            257
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerModelLoader",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "MelBandRoFormer_comfy/MelBandRoformer_fp32.safetensors"
+      ]
+    },
+    {
+      "id": 222,
+      "type": "SaveAudioMP3",
+      "pos": [
+        3016.73388671875,
+        3805.54052734375
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 259
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "label": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "env",
+        "V0"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 218,
+      "type": "MelBandRoFormerSampler",
+      "pos": [
+        2684.156982421875,
+        3713.42529296875
+      ],
+      "size": [
+        231.27206420898438,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "link": 257
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 258
+        }
+      ],
+      "outputs": [
+        {
+          "label": "vocals",
+          "name": "vocals",
+          "type": "AUDIO",
+          "links": [
+            260
+          ]
+        },
+        {
+          "label": "instruments",
+          "name": "instruments",
+          "type": "AUDIO",
+          "links": [
+            259
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerSampler",
+        "cnr_id": "ComfyUI-MelBandRoFormer",
+        "ver": "b40e263224778ec417114d91d8b3b39934e30de5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 221,
+      "type": "SaveAudioMP3",
+      "pos": [
+        3008.08349609375,
+        3597.576171875
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 260
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "label": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "vocals",
+        "V0"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 217,
+      "type": "LoadAudio",
+      "pos": [
+        2354.642822265625,
+        3759.3916015625
+      ],
+      "size": [
+        281.5520324707031,
+        136
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            258
+          ]
+        }
+      ],
+      "title": "输入原音频",
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1",
+        "widget_ue_connectable": {
+          "upload": true,
+          "audio": true,
+          "audioUI": true
+        }
+      },
+      "widgets_values": [
+        "39edb0d466187fc60afc4506cf8a948516a0ccd7d23173e96b616c721d59c4dc.MP3",
+        null,
+        null
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 199,
+      "type": "LoadAudio",
+      "pos": [
+        2350.7373046875,
+        3090.96435546875
+      ],
+      "size": [
+        281.5520324707031,
+        136
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            256
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1",
+        "widget_ue_connectable": {
+          "upload": true,
+          "audio": true,
+          "audioUI": true
+        }
+      },
+      "widgets_values": [
+        "2a18a079219a0ef3d78c9fa4c2b3f562f4278ab0a76e291118c51baf3532b862.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 45,
+      "type": "VoiceBridgeASRTranscribe",
+      "pos": [
+        2625.023681640625,
+        1668.61328125
+      ],
+      "size": [
+        339.7463073730469,
+        196
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "link": 208
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 89
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          }
+        },
+        {
+          "label": "context",
+          "name": "context",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "context"
+          }
+        },
+        {
+          "label": "return_timestamps",
+          "name": "return_timestamps",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "return_timestamps"
+          }
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "QWEN3_ASR_MODEL"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "links": []
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            163
+          ]
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING"
+        },
+        {
+          "label": "timestamps",
+          "name": "timestamps",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRTranscribe",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a",
+        "widget_ue_connectable": {
+          "context": true,
+          "language": true,
+          "return_timestamps": true
+        }
+      },
+      "widgets_values": [
+        "auto",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 177,
+      "type": "VoiceBridgeSRTSplitter",
+      "pos": [
+        3585.71923828125,
+        1765.0225830078125
+      ],
+      "size": [
+        266.1524658203125,
+        281.7366943359375
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "srt_string",
+          "name": "srt_string",
+          "type": "STRING",
+          "widget": {
+            "name": "srt_string"
+          },
+          "link": 292
+        }
+      ],
+      "outputs": [
+        {
+          "label": "texts",
+          "name": "texts",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            246
+          ]
+        },
+        {
+          "label": "srt_items",
+          "name": "srt_items",
+          "type": "VB_SRT_ITEMS",
+          "links": [
+            219
+          ]
+        },
+        {
+          "label": "count",
+          "name": "count",
+          "type": "INT"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeSRTSplitter",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "5149c68df1d156794999bd77ff6a86fcab0314ed",
+        "widget_ue_connectable": {
+          "srt_string": true
+        }
+      },
+      "widgets_values": [
+        "1\n00:00:02,080 --> 00:00:03,200\n全民制作人们 大家好\n\n2\n00:00:03,439 --> 00:00:06,160\n我是练习时长两年半的个人练习生蔡徐坤\n\n3\n00:00:06,480 --> 00:00:09,359\n喜欢唱、跳、rap、篮球、music\n\n"
+      ]
+    },
+    {
+      "id": 253,
+      "type": "VoiceBridgeASRTranscribe",
+      "pos": [
+        1624.9632568359375,
+        2002.8311767578125
+      ],
+      "size": [
+        339.7463073730469,
+        196
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "link": 312
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 302
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "QWEN3_ASR_MODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "label": "forced_aligns",
+          "name": "forced_aligns",
+          "type": "LIST",
+          "links": []
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            304,
+            305
+          ]
+        },
+        {
+          "label": "language",
+          "name": "language",
+          "type": "STRING"
+        },
+        {
+          "label": "timestamps",
+          "name": "timestamps",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRTranscribe",
+        "widget_ue_connectable": {
+          "context": true,
+          "language": true,
+          "return_timestamps": true
+        },
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a"
+      },
+      "widgets_values": [
+        "auto",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 254,
+      "type": "SetNode",
+      "pos": [
+        1992.2423095703125,
+        1778.9376220703125
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "link": 303
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO"
+        }
+      ],
+      "title": "Set_Custom audio",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Custom audio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Custom audio"
+      ]
+    },
+    {
+      "id": 255,
+      "type": "SetNode",
+      "pos": [
+        1995.6175537109375,
+        1897.886474609375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "link": 304
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING"
+        }
+      ],
+      "title": "Set_Custom text",
+      "properties": {
+        "Node name for S&R": "SetNode",
+        "aux_id": "SetNode",
+        "previousName": "Custom text",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Custom text"
+      ]
+    },
+    {
+      "id": 256,
+      "type": "easy showAnything",
+      "pos": [
+        1982.5074462890625,
+        2029.7125244140625
+      ],
+      "size": [
+        234.05416870117188,
+        160.82620239257812
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 305
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Hello everyone. I'm Sam Fading. Today, I'm showing an AI image generation tool with you."
+      ]
+    },
+    {
+      "id": 257,
+      "type": "Note",
+      "pos": [
+        1280.0838623046875,
+        1770.927001953125
+      ],
+      "size": [
+        260.1112976074219,
+        232.46372985839844
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "在这里你可以加载一段你本人使用目标语言发音的纯人声音频，这样翻译出来的音频会更接近你本人的音色。默认使用原音频作为参考音频。如需使用自定义音频，加载自定义音频并启用“Custom audio ASR”模块后运行工作流即可\n\nHere you can load a clear audio clip of yourself speaking in the target language. This will help the translated audio sound more like your own voice.By default, the original audio is used as the reference audio. If you want to use a custom audio, load the custom audio and enable the \"Custom audio ASR\" module before running the workflow."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 258,
+      "type": "Note",
+      "pos": [
+        1873.6168212890625,
+        1583.871337890625
+      ],
+      "size": [
+        350.62066650390625,
+        88
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "节点地址",
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "https://github.com/YanTianlong-01/comfyui_voicebridge"
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 4
+    },
+    {
+      "id": 259,
+      "type": "LoadAudio",
+      "pos": [
+        1562.6785888671875,
+        1781.4361572265625
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            302,
+            303
+          ]
+        }
+      ],
+      "title": "输入参考音频",
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "dd52a5d800491ba8577a321130f2e8f6284720985448c08bfd1e291525bfcfef.mp3",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 147,
+      "type": "GetNode",
+      "pos": [
+        3336.365234375,
+        1838.817626953125
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            292
+          ]
+        }
+      ],
+      "title": "Get_Translated SRT",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Translated SRT"
+      ]
+    },
+    {
+      "id": 249,
+      "type": "GetNode",
+      "pos": [
+        3319.0615234375,
+        2119.168701171875
+      ],
+      "size": [
+        219.67147827148438,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            306
+          ]
+        }
+      ],
+      "title": "Get_Original reference audio",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Original reference audio"
+      ]
+    },
+    {
+      "id": 262,
+      "type": "GetNode",
+      "pos": [
+        3333.01025390625,
+        2236.693359375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            308
+          ]
+        }
+      ],
+      "title": "Get_Custom audio",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Custom audio"
+      ]
+    },
+    {
+      "id": 264,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        3948.931396484375,
+        2242.158447265625
+      ],
+      "size": [
+        166.72030639648438,
+        106
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "any_01",
+          "name": "any_01",
+          "type": "STRING",
+          "link": 309
+        },
+        {
+          "dir": 3,
+          "label": "any_02",
+          "name": "any_02",
+          "type": "STRING",
+          "link": 311
+        },
+        {
+          "dir": 3,
+          "label": "any_03",
+          "name": "any_03",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "label": "any_04",
+          "name": "any_04",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_05",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "STRING",
+          "name": "*",
+          "shape": 3,
+          "type": "STRING",
+          "links": [
+            310
+          ]
+        }
+      ],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 248,
+      "type": "GetNode",
+      "pos": [
+        3614.5537109375,
+        2267.921630859375
+      ],
+      "size": [
+        219.67147827148438,
+        58
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            309
+          ]
+        }
+      ],
+      "title": "Get_Reference text",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Reference text"
+      ]
+    },
+    {
+      "id": 263,
+      "type": "GetNode",
+      "pos": [
+        3625.853759765625,
+        2368.80224609375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            311
+          ]
+        }
+      ],
+      "title": "Get_Custom text",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Custom text"
+      ]
+    },
+    {
+      "id": 252,
+      "type": "VoiceBridgeASRLoader",
+      "pos": [
+        1284.2056884765625,
+        2059.259033203125
+      ],
+      "size": [
+        293.85516357421875,
+        155.7703857421875
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "model_key",
+          "name": "model_key",
+          "type": "MODEL_KEY",
+          "links": [
+            312
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeASRLoader",
+        "widget_ue_connectable": {
+          "forced_aligner": true,
+          "max_new_tokens": true,
+          "precision": true,
+          "attention": true
+        },
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "ddefcc0082ab9591f9b613f0de565f25f85d8f2a"
+      },
+      "widgets_values": [
+        "Qwen/Qwen3-ASR-1.7B",
+        "bf16",
+        "flash_attention_2",
+        1024,
+        "Qwen/Qwen3-ForcedAligner-0.6B"
+      ]
+    },
+    {
+      "id": 260,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        1270.8333740234375,
+        1606.4197998046875
+      ],
+      "size": [
+        370.3751220703125,
+        63.666927337646484
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "OPT_CONNECTION",
+          "name": "OPT_CONNECTION",
+          "type": "*"
+        }
+      ],
+      "title": "是否使用单独的参考音频",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "可选",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "widget_ue_connectable": {}
+      },
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 153,
+      "type": "Note",
+      "pos": [
+        2511.468994140625,
+        1331.1826171875
+      ],
+      "size": [
+        231.91683959960938,
+        91.09986114501953
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "目标语言就是你想要翻译成的语言,请从下面拷贝：\nArabic, Burmese, Chinese, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Malay, Norwegian, Polish, Portuguese, Russian, Spanish, Swahili, Swedish, Tagalog, Thai, Turkish, Vietnamese"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 99,
+      "type": "MelBandRoFormerSampler",
+      "pos": [
+        2569.349609375,
+        1162.954833984375
+      ],
+      "size": [
+        231.27206420898438,
+        46
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MELROFORMERMODEL",
+          "link": 137
+        },
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 205
+        }
+      ],
+      "outputs": [
+        {
+          "label": "vocals",
+          "name": "vocals",
+          "type": "AUDIO",
+          "links": [
+            159
+          ]
+        },
+        {
+          "label": "instruments",
+          "name": "instruments",
+          "type": "AUDIO",
+          "links": [
+            199
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MelBandRoFormerSampler",
+        "cnr_id": "ComfyUI-MelBandRoFormer",
+        "ver": "b40e263224778ec417114d91d8b3b39934e30de5",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        },
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "LoadAudio",
+      "pos": [
+        2259.259521484375,
+        1146.6513671875
+      ],
+      "size": [
+        281.5520324707031,
+        136
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        },
+        {
+          "label": "upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            205
+          ]
+        }
+      ],
+      "title": "输入原音频",
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1",
+        "widget_ue_connectable": {
+          "upload": true,
+          "audio": true,
+          "audioUI": true
+        }
+      },
+      "widgets_values": [
+        "fcecb7fd3827851a4fb22c52886610aed0a62e5fe32ea46f3b1291ff3dd236ab.mp3",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 261,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        3965.07763671875,
+        2040.2728271484375
+      ],
+      "size": [
+        166.72030639648438,
+        106
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "any_01",
+          "name": "any_01",
+          "type": "AUDIO",
+          "link": 306
+        },
+        {
+          "dir": 3,
+          "label": "any_02",
+          "name": "any_02",
+          "type": "AUDIO",
+          "link": 308
+        },
+        {
+          "dir": 3,
+          "label": "any_03",
+          "name": "any_03",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "label": "any_04",
+          "name": "any_04",
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_05",
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "AUDIO",
+          "name": "*",
+          "shape": 3,
+          "type": "AUDIO",
+          "links": [
+            307
+          ]
+        }
+      ],
+      "properties": {
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 207,
+      "type": "RunningHub_VoxCPM_LoadModel",
+      "pos": [
+        3930.92919921875,
+        1785.65771484375
+      ],
+      "size": [
+        253.14022827148438,
+        106
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          }
+        },
+        {
+          "label": "optimize",
+          "name": "optimize",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "optimize"
+          }
+        },
+        {
+          "label": "lora_name",
+          "name": "lora_name",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "VOXCPM_MODEL",
+          "links": [
+            245
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHub_VoxCPM_LoadModel",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "VoxCPM2",
+        false,
+        "None"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 110,
+      "type": "easy string",
+      "pos": [
+        2278.14697265625,
+        1337.082275390625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "value",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "string",
+          "name": "string",
+          "type": "STRING",
+          "links": [
+            151
+          ]
+        }
+      ],
+      "title": "输入目标语言",
+      "properties": {
+        "Node name for S&R": "easy string",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "English"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 116,
+      "type": "GetNode",
+      "pos": [
+        2288.33984375,
+        1647.5472412109375
+      ],
+      "size": [
+        225.12655639648438,
+        60
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            160,
+            161
+          ]
+        }
+      ],
+      "title": "Get_Separated human voices",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Separated human voices"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "TrimAudioDuration",
+      "pos": [
+        2289.86181640625,
+        1769.0185546875
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 160
+        },
+        {
+          "label": "start_index",
+          "name": "start_index",
+          "type": "FLOAT",
+          "widget": {
+            "name": "start_index"
+          }
+        },
+        {
+          "label": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            89,
+            162
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrimAudioDuration",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1",
+        "widget_ue_connectable": {
+          "duration": true,
+          "start_index": true
+        }
+      },
+      "widgets_values": [
+        0,
+        10.000000000000002
+      ]
+    },
+    {
+      "id": 206,
+      "type": "RunningHub_VoxCPM_Generate",
+      "pos": [
+        4257.484375,
+        1793.946044921875
+      ],
+      "size": [
+        408.29345703125,
+        567.8054809570312
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "VOXCPM_MODEL",
+          "link": 245
+        },
+        {
+          "label": "reference_audio",
+          "name": "reference_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 307
+        },
+        {
+          "label": "control_instruction",
+          "name": "control_instruction",
+          "type": "STRING",
+          "widget": {
+            "name": "control_instruction"
+          }
+        },
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 246
+        },
+        {
+          "label": "cfg_value",
+          "name": "cfg_value",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_value"
+          }
+        },
+        {
+          "label": "inference_steps",
+          "name": "inference_steps",
+          "type": "INT",
+          "widget": {
+            "name": "inference_steps"
+          }
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "label": "ultimate_clone",
+          "name": "ultimate_clone",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "ultimate_clone"
+          }
+        },
+        {
+          "label": "reference_audio_text",
+          "name": "reference_audio_text",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "reference_audio_text"
+          },
+          "link": 310
+        },
+        {
+          "label": "normalize_text",
+          "name": "normalize_text",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "normalize_text"
+          }
+        },
+        {
+          "label": "denoise_reference",
+          "name": "denoise_reference",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "denoise_reference"
+          }
+        },
+        {
+          "label": "max_len",
+          "name": "max_len",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "max_len"
+          }
+        },
+        {
+          "label": "retry_badcase",
+          "name": "retry_badcase",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "retry_badcase"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            315
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RunningHub_VoxCPM_Generate",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        "Hello, this is a test.",
+        2,
+        10,
+        220751697769047,
+        "randomize",
+        true,
+        "This is a moose, right?\nOh, that's how it works, so it depend on the peak.",
+        false,
+        false,
+        4096,
+        true
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 176,
+      "type": "VoiceBridgeAudioListMergerBySRT",
+      "pos": [
+        4734.8857421875,
+        1678.13232421875
+      ],
+      "size": [
+        316.6376647949219,
+        129.57545471191406
+      ],
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "srt_items",
+          "name": "srt_items",
+          "type": "VB_SRT_ITEMS",
+          "link": 219
+        },
+        {
+          "label": "audios",
+          "name": "audios",
+          "type": "AUDIO",
+          "link": 316
+        },
+        {
+          "label": "tempo_limit",
+          "name": "tempo_limit",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "tempo_limit"
+          }
+        },
+        {
+          "label": "mini_gap_ms",
+          "name": "mini_gap_ms",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "mini_gap_ms"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            296
+          ]
+        },
+        {
+          "label": "adjusted_srt",
+          "name": "adjusted_srt",
+          "type": "STRING",
+          "links": [
+            223
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VoiceBridgeAudioListMergerBySRT",
+        "cnr_id": "comfyui_voicebridge",
+        "ver": "5149c68df1d156794999bd77ff6a86fcab0314ed",
+        "widget_ue_connectable": {
+          "tempo_limit": true,
+          "mini_gap_ms": true
+        }
+      },
+      "widgets_values": [
+        2,
+        10
+      ]
+    },
+    {
+      "id": 214,
+      "type": "SaveSRTFromString",
+      "pos": [
+        5480.3583984375,
+        1923.338623046875
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "srt_string",
+          "name": "srt_string",
+          "type": "STRING",
+          "widget": {
+            "name": "srt_string"
+          },
+          "link": 253
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "save_path",
+          "name": "save_path",
+          "type": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveSRTFromString",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        "VoiceBridge/subtitle"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 179,
+      "type": "easy showAnything",
+      "pos": [
+        5090.2705078125,
+        1930.040283203125
+      ],
+      "size": [
+        364.845947265625,
+        379.28558349609375
+      ],
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "anything",
+          "name": "anything",
+          "shape": 7,
+          "type": "*",
+          "link": 223
+        }
+      ],
+      "outputs": [
+        {
+          "label": "output",
+          "name": "output",
+          "type": "*",
+          "links": [
+            253
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy showAnything",
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.6",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "1\n00:00:00,000 --> 00:00:03,540\nI bet you've seen a comment like this under all kinds of content.\n\n2\n00:00:03,550 --> 00:00:04,681\nA few months ago,\n\n3\n00:00:04,960 --> 00:00:06,851\neveryone used it as a joke.\n\n4\n00:00:06,861 --> 00:00:07,835\nIt was a meme.\n\n5\n00:00:07,845 --> 00:00:08,400\nRight?\n\n6\n00:00:08,410 --> 00:00:09,683\nYou see something absurd.\n\n7\n00:00:09,693 --> 00:00:10,536\nYou'd say,\n\n8\n00:00:10,546 --> 00:00:10,996\n\"Ah,\n\n9\n00:00:11,006 --> 00:00:13,018\nmust be AI, or AI is too good.\n\n10\n00:00:13,028 --> 00:00:13,837\nBro.\"\n\n11\n00:00:13,847 --> 00:00:14,700\nBut the interesting thing is,\n\n12\n00:00:14,710 --> 00:00:15,946\njust a few months later,\n\n13\n00:00:15,956 --> 00:00:20,245\nnow the emotion behind \"Is this AI?\" has changed.\n\n14\n00:00:20,255 --> 00:00:23,795\nBecause AI has gotten even stronger.\n"
+      ]
+    },
+    {
+      "id": 251,
+      "type": "MergeAudioMW",
+      "pos": [
+        5330.80029296875,
+        1707.669921875
+      ],
+      "size": [
+        164.431640625,
+        46
+      ],
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio_1",
+          "name": "audio_1",
+          "type": "AUDIO",
+          "link": 296
+        },
+        {
+          "label": "audio_2",
+          "name": "audio_2",
+          "type": "AUDIO",
+          "link": 295
+        }
+      ],
+      "outputs": [
+        {
+          "label": "merged_audio",
+          "name": "merged_audio",
+          "type": "AUDIO",
+          "links": [
+            297
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MergeAudioMW",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 250,
+      "type": "GetNode",
+      "pos": [
+        5100.14599609375,
+        1779.1236572265625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            295
+          ]
+        }
+      ],
+      "title": "Get_Ambient sound",
+      "properties": {
+        "Node name for S&R": "GetNode",
+        "aux_id": "GetNode",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "Ambient sound"
+      ]
+    },
+    {
+      "id": 268,
+      "type": "TrimAudioDuration",
+      "pos": [
+        4716.50341796875,
+        1887.7354736328125
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 315
+        }
+      ],
+      "outputs": [
+        {
+          "label": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            316
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrimAudioDuration",
+        "widget_ue_connectable": {
+          "duration": true,
+          "start_index": true
+        },
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1"
+      },
+      "widgets_values": [
+        0.30000000000000004,
+        100.00000000000001
+      ]
+    },
+    {
+      "id": 180,
+      "type": "SaveAudioMP3",
+      "pos": [
+        5515.87353515625,
+        1697.279052734375
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 297
+        },
+        {
+          "label": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "label": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          }
+        },
+        {
+          "label": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3",
+        "cnr_id": "comfy-core",
+        "ver": "0.12.1",
+        "widget_ue_connectable": {
+          "filename_prefix": true,
+          "audioUI": true,
+          "quality": true
+        }
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 105,
+      "type": "RH_LLMAPI_NODE",
+      "pos": [
+        4226.4248046875,
+        973.7415771484375
+      ],
+      "size": [
+        400,
+        396
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "ref_image",
+          "name": "ref_image",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "video",
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO"
+        },
+        {
+          "label": "ref_image1",
+          "name": "ref_image1",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "ref_image2",
+          "name": "ref_image2",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "ref_image3",
+          "name": "ref_image3",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "api_baseurl",
+          "name": "api_baseurl",
+          "type": "STRING",
+          "widget": {
+            "name": "api_baseurl"
+          }
+        },
+        {
+          "label": "api_key",
+          "name": "api_key",
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          }
+        },
+        {
+          "label": "model",
+          "name": "model",
+          "type": "STRING",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "label": "role",
+          "name": "role",
+          "type": "STRING",
+          "widget": {
+            "name": "role"
+          },
+          "link": 150
+        },
+        {
+          "label": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 146
+        },
+        {
+          "label": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          }
+        },
+        {
+          "label": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "label": "describe",
+          "name": "describe",
+          "type": "STRING",
+          "links": [
+            147,
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RH_LLMAPI_NODE",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "https://api.deepseek.com",
+        "",
+        "deepseek-v4-flash",
+        "",
+        "Hello",
+        0.5,
+        1761935326,
+        "randomize"
+      ]
+    }
+  ],
+  "links": [
+    [
+      89,
+      46,
+      0,
+      45,
+      1,
+      "AUDIO"
+    ],
+    [
+      104,
+      36,
+      0,
+      61,
+      0,
+      "*"
+    ],
+    [
+      137,
+      96,
+      0,
+      99,
+      0,
+      "MELROFORMERMODEL"
+    ],
+    [
+      146,
+      36,
+      0,
+      105,
+      9,
+      "STRING"
+    ],
+    [
+      147,
+      105,
+      0,
+      107,
+      0,
+      "*"
+    ],
+    [
+      149,
+      108,
+      0,
+      109,
+      0,
+      "STRING"
+    ],
+    [
+      150,
+      109,
+      0,
+      105,
+      8,
+      "STRING"
+    ],
+    [
+      151,
+      110,
+      0,
+      109,
+      2,
+      "STRING"
+    ],
+    [
+      159,
+      99,
+      0,
+      115,
+      0,
+      "*"
+    ],
+    [
+      160,
+      116,
+      0,
+      46,
+      0,
+      "AUDIO"
+    ],
+    [
+      161,
+      116,
+      0,
+      33,
+      1,
+      "AUDIO"
+    ],
+    [
+      162,
+      46,
+      0,
+      117,
+      0,
+      "*"
+    ],
+    [
+      163,
+      45,
+      1,
+      118,
+      0,
+      "*"
+    ],
+    [
+      166,
+      33,
+      0,
+      121,
+      0,
+      "*"
+    ],
+    [
+      167,
+      33,
+      1,
+      122,
+      0,
+      "*"
+    ],
+    [
+      168,
+      33,
+      2,
+      123,
+      0,
+      "*"
+    ],
+    [
+      169,
+      124,
+      0,
+      36,
+      0,
+      "LIST"
+    ],
+    [
+      170,
+      125,
+      0,
+      36,
+      1,
+      "STRING"
+    ],
+    [
+      171,
+      126,
+      0,
+      36,
+      2,
+      "STRING"
+    ],
+    [
+      172,
+      105,
+      0,
+      127,
+      0,
+      "*"
+    ],
+    [
+      199,
+      99,
+      1,
+      164,
+      0,
+      "*"
+    ],
+    [
+      205,
+      16,
+      0,
+      99,
+      1,
+      "AUDIO"
+    ],
+    [
+      208,
+      31,
+      0,
+      45,
+      0,
+      "MODEL_KEY"
+    ],
+    [
+      209,
+      31,
+      0,
+      33,
+      0,
+      "MODEL_KEY"
+    ],
+    [
+      219,
+      177,
+      1,
+      176,
+      0,
+      "VB_SRT_ITEMS"
+    ],
+    [
+      223,
+      176,
+      1,
+      179,
+      0,
+      "*"
+    ],
+    [
+      239,
+      202,
+      0,
+      200,
+      0,
+      "LIST"
+    ],
+    [
+      240,
+      202,
+      1,
+      200,
+      1,
+      "STRING"
+    ],
+    [
+      241,
+      202,
+      2,
+      200,
+      2,
+      "STRING"
+    ],
+    [
+      242,
+      200,
+      0,
+      201,
+      0,
+      "*"
+    ],
+    [
+      243,
+      198,
+      0,
+      202,
+      0,
+      "MODEL_KEY"
+    ],
+    [
+      245,
+      207,
+      0,
+      206,
+      0,
+      "VOXCPM_MODEL"
+    ],
+    [
+      246,
+      177,
+      0,
+      206,
+      3,
+      "STRING"
+    ],
+    [
+      253,
+      179,
+      0,
+      214,
+      0,
+      "STRING"
+    ],
+    [
+      254,
+      216,
+      0,
+      215,
+      0,
+      "MELROFORMERMODEL"
+    ],
+    [
+      255,
+      215,
+      0,
+      202,
+      1,
+      "AUDIO"
+    ],
+    [
+      256,
+      199,
+      0,
+      215,
+      1,
+      "AUDIO"
+    ],
+    [
+      257,
+      219,
+      0,
+      218,
+      0,
+      "MELROFORMERMODEL"
+    ],
+    [
+      258,
+      217,
+      0,
+      218,
+      1,
+      "AUDIO"
+    ],
+    [
+      259,
+      218,
+      1,
+      222,
+      0,
+      "AUDIO"
+    ],
+    [
+      260,
+      218,
+      0,
+      221,
+      0,
+      "AUDIO"
+    ],
+    [
+      292,
+      147,
+      0,
+      177,
+      0,
+      "STRING"
+    ],
+    [
+      295,
+      250,
+      0,
+      251,
+      1,
+      "AUDIO"
+    ],
+    [
+      296,
+      176,
+      0,
+      251,
+      0,
+      "AUDIO"
+    ],
+    [
+      297,
+      251,
+      0,
+      180,
+      0,
+      "AUDIO"
+    ],
+    [
+      302,
+      259,
+      0,
+      253,
+      1,
+      "AUDIO"
+    ],
+    [
+      303,
+      259,
+      0,
+      254,
+      0,
+      "*"
+    ],
+    [
+      304,
+      253,
+      1,
+      255,
+      0,
+      "*"
+    ],
+    [
+      305,
+      253,
+      1,
+      256,
+      0,
+      "*"
+    ],
+    [
+      306,
+      249,
+      0,
+      261,
+      0,
+      "*"
+    ],
+    [
+      307,
+      261,
+      0,
+      206,
+      1,
+      "AUDIO"
+    ],
+    [
+      308,
+      262,
+      0,
+      261,
+      1,
+      "AUDIO"
+    ],
+    [
+      309,
+      248,
+      0,
+      264,
+      0,
+      "*"
+    ],
+    [
+      310,
+      264,
+      0,
+      206,
+      8,
+      "STRING"
+    ],
+    [
+      311,
+      263,
+      0,
+      264,
+      1,
+      "STRING"
+    ],
+    [
+      312,
+      252,
+      0,
+      253,
+      0,
+      "MODEL_KEY"
+    ],
+    [
+      315,
+      206,
+      0,
+      268,
+      0,
+      "AUDIO"
+    ],
+    [
+      316,
+      268,
+      0,
+      176,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "floatingLinks": [
+    {
+      "id": 2,
+      "origin_id": 177,
+      "origin_slot": 0,
+      "target_id": -1,
+      "target_slot": -1,
+      "type": "STRING",
+      "parentId": 2
+    }
+  ],
+  "groups": [
+    {
+      "id": 4,
+      "title": "Bilibili/Youtube：SevnFading",
+      "bounding": [
+        2136.488037109375,
+        -41.368934631347656,
+        3076.588623046875,
+        327.84368896484375
+      ],
+      "color": "#3f789e",
+      "font_size": 240,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "在使用此工作流前，请先点关注以下频道，谢谢",
+      "bounding": [
+        1177.0711669921875,
+        -555.101806640625,
+        5060.861328125,
+        334.6159973144531
+      ],
+      "color": "#8AA",
+      "font_size": 240,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "VoiceGate：跨语言视频智能配音引擎",
+      "bounding": [
+        1557.17529296875,
+        433.12554931640625,
+        4059.458740234375,
+        332.25274658203125
+      ],
+      "color": "#88A",
+      "font_size": 240,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "1 VoiceBridge ASR",
+      "bounding": [
+        2275.541015625,
+        1573.9482421875,
+        976.2326049804688,
+        682.24169921875
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "2 VoiceBridge SRT Translate",
+      "bounding": [
+        3140.58349609375,
+        900.141357421875,
+        1882.4110107421875,
+        600.83251953125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "输入：Human voice separation",
+      "bounding": [
+        2244.635498046875,
+        899.3278198242188,
+        833.7108764648438,
+        603.8146362304688
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "3 SRT To Audio by VoxCPM TTS",
+      "bounding": [
+        3312.4443359375,
+        1550.8043212890625,
+        2494.289794921875,
+        908.720703125
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "VoxCPM TTS",
+      "bounding": [
+        3917.070068359375,
+        1707.8994140625,
+        764.7679443359375,
+        733.7567749023438
+      ],
+      "color": "#88A",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 20,
+      "title": "3-音频转字幕",
+      "bounding": [
+        2321.3662109375,
+        2821.237548828125,
+        2161.23583984375,
+        473.541015625
+      ],
+      "color": "#b06634",
+      "font_size": 60,
+      "flags": {}
+    },
+    {
+      "id": 24,
+      "title": "4-人声背景声分离",
+      "bounding": [
+        2326.268310546875,
+        3393.2724609375,
+        1043.11376953125,
+        610.8731689453125
+      ],
+      "color": "#3f789e",
+      "font_size": 60,
+      "flags": {}
+    },
+    {
+      "id": 27,
+      "title": "输入（可选）：Custom audio ASR",
+      "bounding": [
+        1268.6402587890625,
+        1688.833984375,
+        967.5845947265625,
+        534.5038452148438
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "links_added_by_ue": [],
+    "VHS_KeepIntermediate": true,
+    "ue_links": [],
+    "VHS_MetadataImage": true,
+    "0246.VERSION": [
+      0,
+      0,
+      4
+    ],
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreviewrate": 0,
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          3918.572021484375,
+          1685.84912109375
+        ],
+        "linkIds": [
+          219
+        ]
+      },
+      {
+        "id": 2,
+        "pos": [
+          3892.281494140625,
+          1942.5203857421875
+        ],
+        "linkIds": [
+          246
+        ],
+        "floating": {
+          "slotType": "output"
+        }
+      }
+    ],
+    "frontendVersion": "1.23.0",
+    "VHS_latentpreview": false,
+    "ds": {
+      "scale": 0.724729500000006,
+      "offset": [
+        -2944.952705412889,
+        -704.6755215932656
+      ]
+    },
+    "linkExtensions": [
+      {
+        "id": 219,
+        "parentId": 1
+      },
+      {
+        "id": 246,
+        "parentId": 2
+      }
+    ]
+  },
+  "version": 0.4
+}
