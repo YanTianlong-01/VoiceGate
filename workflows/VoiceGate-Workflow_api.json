@@ -1,0 +1,375 @@
+{
+  "16": {
+    "inputs": {
+      "audio": "fcecb7fd3827851a4fb22c52886610aed0a62e5fe32ea46f3b1291ff3dd236ab.mp3",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "输入原音频"
+    }
+  },
+  "31": {
+    "inputs": {
+      "repo_id": "Qwen/Qwen3-ASR-1.7B",
+      "precision": "bf16",
+      "attention": "flash_attention_2",
+      "max_new_tokens": 1024,
+      "forced_aligner": "Qwen/Qwen3-ForcedAligner-0.6B"
+    },
+    "class_type": "VoiceBridgeASRLoader",
+    "_meta": {
+      "title": "VoiceBridge ASR Loader"
+    }
+  },
+  "33": {
+    "inputs": {
+      "language": "auto",
+      "context": "",
+      "return_timestamps": true,
+      "model_key": [
+        "31",
+        0
+      ],
+      "audio": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "VoiceBridgeASRTranscribe",
+    "_meta": {
+      "title": "VoiceBridge ASR Transcribe"
+    }
+  },
+  "36": {
+    "inputs": {
+      "text": [
+        "33",
+        1
+      ],
+      "language": [
+        "33",
+        2
+      ],
+      "save_srt": true,
+      "filename_prefix": "VoiceBridge/subtitle",
+      "forced_aligns": [
+        "33",
+        0
+      ]
+    },
+    "class_type": "GenerateSRT",
+    "_meta": {
+      "title": "Generate SRT"
+    }
+  },
+  "45": {
+    "inputs": {
+      "language": "auto",
+      "context": "",
+      "return_timestamps": false,
+      "model_key": [
+        "31",
+        0
+      ],
+      "audio": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "VoiceBridgeASRTranscribe",
+    "_meta": {
+      "title": "VoiceBridge ASR Transcribe"
+    }
+  },
+  "46": {
+    "inputs": {
+      "start_index": 0,
+      "duration": 10.000000000000002,
+      "audio": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  },
+  "61": {
+    "inputs": {
+      "text": "1\n00:00:00,000 --> 00:00:04,000\n我相信你在各种内容下面应该都见过这样一句类似的评论\n\n2\n00:00:04,240 --> 00:00:04,960\n那几个月之前\n\n3\n00:00:04,960 --> 00:00:06,879\n其实大家把这个当成一种调侃了\n\n4\n00:00:06,879 --> 00:00:07,679\n是一种梗\n\n5\n00:00:07,679 --> 00:00:07,919\n对吧\n\n6\n00:00:08,160 --> 00:00:09,359\n你看到太离谱的东西\n\n7\n00:00:09,439 --> 00:00:10,320\n你会说\n\n8\n00:00:10,320 --> 00:00:10,800\n“哎呀\n\n9\n00:00:10,800 --> 00:00:12,560\n这是AI或者AI太好用了\n\n10\n00:00:12,560 --> 00:00:12,960\n家人\n\n11\n00:00:13,359 --> 00:00:14,240\n”但有意思的就是\n\n12\n00:00:14,240 --> 00:00:15,359\n只过了短短几个月\n\n13\n00:00:15,519 --> 00:00:19,519\n你会发现现在这句“这是AI嘛”背后的情绪它变化了\n\n14\n00:00:19,839 --> 00:00:21,280\n因为AI它又变强了\n\n",
+      "anything": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "96": {
+    "inputs": {
+      "model_name": "MelBandRoFormer_comfy/MelBandRoformer_fp32.safetensors"
+    },
+    "class_type": "MelBandRoFormerModelLoader",
+    "_meta": {
+      "title": "Mel-Band RoFormer Model Loader"
+    }
+  },
+  "99": {
+    "inputs": {
+      "model": [
+        "96",
+        0
+      ],
+      "audio": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "MelBandRoFormerSampler",
+    "_meta": {
+      "title": "Mel-Band RoFormer Sampler"
+    }
+  },
+  "105": {
+    "inputs": {
+      "api_baseurl": "https://api.deepseek.com",
+      "api_key": "",
+      "model": "deepseek-v4-flash",
+      "role": [
+        "109",
+        0
+      ],
+      "prompt": [
+        "36",
+        0
+      ],
+      "temperature": 0.5,
+      "seed": 1761935326
+    },
+    "class_type": "RH_LLMAPI_NODE",
+    "_meta": {
+      "title": "Runninghub LLM API Node"
+    }
+  },
+  "107": {
+    "inputs": {
+      "text": "1\n00:00:00,000 --> 00:00:04,000\nI bet you've seen a comment like this under all kinds of content.\n\n2\n00:00:04,240 --> 00:00:04,960\nA few months ago,\n\n3\n00:00:04,960 --> 00:00:06,879\neveryone used it as a joke.\n\n4\n00:00:06,879 --> 00:00:07,679\nIt was a meme.\n\n5\n00:00:07,679 --> 00:00:07,919\nRight?\n\n6\n00:00:08,160 --> 00:00:09,359\nYou see something absurd.\n\n7\n00:00:09,439 --> 00:00:10,320\nYou'd say,\n\n8\n00:00:10,320 --> 00:00:10,800\n\"Ah,\n\n9\n00:00:10,800 --> 00:00:12,560\nmust be AI, or AI is too good.\n\n10\n00:00:12,560 --> 00:00:12,960\nBro.\"\n\n11\n00:00:13,359 --> 00:00:14,240\nBut the interesting thing is,\n\n12\n00:00:14,240 --> 00:00:15,359\njust a few months later,\n\n13\n00:00:15,519 --> 00:00:19,519\nnow the emotion behind \"Is this AI?\" has changed.\n\n14\n00:00:19,839 --> 00:00:21,280\nBecause AI has gotten even stronger.",
+      "anything": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "108": {
+    "inputs": {
+      "text": "You are a professional subtitle translator. Please translate all the subtitles in this SRT file into natural, spoken [Language]. Keep each timestamp exactly the same. For each subtitle line, use the shortest possible phrasing that still captures the original meaning (it doesn't have to be a direct translation, just convey the correct idea). Output the content directly in SRT format, without any explanation or descriptive text."
+    },
+    "class_type": "CR Text",
+    "_meta": {
+      "title": "🔤 CR Text"
+    }
+  },
+  "109": {
+    "inputs": {
+      "texts": [
+        "108",
+        0
+      ],
+      "find": "[Language]",
+      "replace": [
+        "110",
+        0
+      ]
+    },
+    "class_type": "ReplaceText",
+    "_meta": {
+      "title": "Replace Text (DEPRECATED)"
+    }
+  },
+  "110": {
+    "inputs": {
+      "value": "English"
+    },
+    "class_type": "easy string",
+    "_meta": {
+      "title": "输入目标语言"
+    }
+  },
+  "176": {
+    "inputs": {
+      "tempo_limit": 2,
+      "mini_gap_ms": 10,
+      "srt_items": [
+        "177",
+        1
+      ],
+      "audios": [
+        "268",
+        0
+      ]
+    },
+    "class_type": "VoiceBridgeAudioListMergerBySRT",
+    "_meta": {
+      "title": "VoiceBridge Audio List Merger by SRT"
+    }
+  },
+  "177": {
+    "inputs": {
+      "srt_string": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "VoiceBridgeSRTSplitter",
+    "_meta": {
+      "title": "VoiceBridge SRT Splitter"
+    }
+  },
+  "179": {
+    "inputs": {
+      "text": "1\n00:00:00,000 --> 00:00:03,540\nI bet you've seen a comment like this under all kinds of content.\n\n2\n00:00:03,550 --> 00:00:04,681\nA few months ago,\n\n3\n00:00:04,960 --> 00:00:06,851\neveryone used it as a joke.\n\n4\n00:00:06,861 --> 00:00:07,835\nIt was a meme.\n\n5\n00:00:07,845 --> 00:00:08,400\nRight?\n\n6\n00:00:08,410 --> 00:00:09,683\nYou see something absurd.\n\n7\n00:00:09,693 --> 00:00:10,536\nYou'd say,\n\n8\n00:00:10,546 --> 00:00:10,996\n\"Ah,\n\n9\n00:00:11,006 --> 00:00:13,018\nmust be AI, or AI is too good.\n\n10\n00:00:13,028 --> 00:00:13,837\nBro.\"\n\n11\n00:00:13,847 --> 00:00:14,700\nBut the interesting thing is,\n\n12\n00:00:14,710 --> 00:00:15,946\njust a few months later,\n\n13\n00:00:15,956 --> 00:00:20,245\nnow the emotion behind \"Is this AI?\" has changed.\n\n14\n00:00:20,255 --> 00:00:23,795\nBecause AI has gotten even stronger.\n",
+      "anything": [
+        "176",
+        1
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "Show Any"
+    }
+  },
+  "180": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "V0",
+      "audioUI": "",
+      "audio": [
+        "251",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  },
+  "206": {
+    "inputs": {
+      "control_instruction": "",
+      "text": [
+        "177",
+        0
+      ],
+      "cfg_value": 2,
+      "inference_steps": 10,
+      "seed": 220751697769047,
+      "ultimate_clone": true,
+      "reference_audio_text": [
+        "264",
+        0
+      ],
+      "normalize_text": false,
+      "denoise_reference": false,
+      "max_len": 4096,
+      "retry_badcase": true,
+      "model": [
+        "207",
+        0
+      ],
+      "reference_audio": [
+        "261",
+        0
+      ]
+    },
+    "class_type": "RunningHub_VoxCPM_Generate",
+    "_meta": {
+      "title": "RunningHub VoxCPM Generate Speech"
+    }
+  },
+  "207": {
+    "inputs": {
+      "model_name": "VoxCPM2",
+      "optimize": false,
+      "lora_name": "None"
+    },
+    "class_type": "RunningHub_VoxCPM_LoadModel",
+    "_meta": {
+      "title": "RunningHub VoxCPM Load Model"
+    }
+  },
+  "214": {
+    "inputs": {
+      "srt_string": [
+        "179",
+        0
+      ],
+      "filename_prefix": "VoiceBridge/subtitle"
+    },
+    "class_type": "SaveSRTFromString",
+    "_meta": {
+      "title": "Save SRT From String"
+    }
+  },
+  "251": {
+    "inputs": {
+      "audio_1": [
+        "176",
+        0
+      ],
+      "audio_2": [
+        "99",
+        1
+      ]
+    },
+    "class_type": "MergeAudioMW",
+    "_meta": {
+      "title": "Merge Audio"
+    }
+  },
+  "261": {
+    "inputs": {
+      "any_01": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "264": {
+    "inputs": {
+      "any_01": [
+        "45",
+        1
+      ]
+    },
+    "class_type": "Any Switch (rgthree)",
+    "_meta": {
+      "title": "Any Switch (rgthree)"
+    }
+  },
+  "268": {
+    "inputs": {
+      "start_index": 0.30000000000000004,
+      "duration": 100.00000000000001,
+      "audio": [
+        "206",
+        0
+      ]
+    },
+    "class_type": "TrimAudioDuration",
+    "_meta": {
+      "title": "Trim Audio Duration"
+    }
+  }
+}
