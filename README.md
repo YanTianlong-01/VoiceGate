@@ -8,6 +8,8 @@ VoiceGate 是基于 VoxCPM2 与 ComfyUI 构建的跨语言视频智能配音引�
 
 完整链路覆盖 ASR 字幕提取、LLM 翻译、多语言 TTS 到音频对齐合并，节点图可视化编排，开箱即用。
 
+[B站效果演示视频【VoiceGate：跨语言视频智能配音引擎】](https://www.bilibili.com/video/BV1sc7C6VE9e/?share_source=copy_web&vd_source=94a8c00ee32b6b955ae0133d5103f92a)
+
 ## 应用场景
 
 - **内容出海**：中文知识类视频一键翻配为英文、日文、韩文等版本，发布到 YouTube/TikTok
