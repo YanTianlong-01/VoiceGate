@@ -68,27 +68,88 @@ VoiceGate/
 
 ### 方式二：本地部署
 
-#### 1. 克隆仓库（含子模块）
+> 推荐使用支持 CUDA 的 NVIDIA 显卡。为兼容本工作流使用的自定义节点，建议使用
+> Python 3.12。如果你已经有可正常运行的 ComfyUI，可以保留现有安装，直接从第 2
+> 步开始。
+
+#### 1. 安装 ComfyUI 并克隆 VoiceGate
 
 ```bash
+mkdir VoiceGate-local && cd VoiceGate-local
+
 git clone --recursive https://github.com/YanTianlong-01/VoiceGate.git
-cd VoiceGate
+git clone https://github.com/comfyanonymous/ComfyUI.git
+
+# macOS / Linux
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+# Windows PowerShell（改为执行下面两行）
+# py -3.12 -m venv .venv
+# .venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+python -m pip install -r ComfyUI/requirements.txt
 ```
 
-#### 2. 安装 ComfyUI 与依赖
+后续命令都要使用同一个 Python 环境。如果使用 ComfyUI Portable，请把命令中的
+`python` 替换为便携版自带的 `python_embeded/python.exe`，并跳过虚拟环境创建。
+
+#### 2. 安装必需的自定义节点
 
 ```bash
-# 安装 ComfyUI
-git clone https://github.com/comfyanonymous/ComfyUI.git
-cd ComfyUI && pip install -r requirements.txt
+cd ComfyUI/custom_nodes
 
-# 安装 VoiceBridge 插件
-cp -r ../VoiceGate/comfyui_voicebridge custom_nodes/
+git clone https://github.com/YanTianlong-01/comfyui_voicebridge.git
+git clone https://github.com/RH-RunningHub/ComfyUI_RH_VoxCPM.git
+git clone https://github.com/kijai/ComfyUI-MelBandRoFormer.git
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git comfyui-manager
+
+cd ..
+python -m pip install -r custom_nodes/comfyui_voicebridge/requirements.txt
+python -m pip install -r custom_nodes/ComfyUI_RH_VoxCPM/requirements.txt
+python -m pip install -r custom_nodes/ComfyUI-MelBandRoFormer/requirements.txt
 ```
 
-#### 3. 加载工作流
+工作流还使用了一些轻量辅助节点。首次启动 ComfyUI 并加载工作流后，打开
+**Manager → Install Missing Custom Nodes**，安装剩余节点包（例如 rgthree、
+Easy Use、Comfyroll 和 AudioTools），然后重启 ComfyUI。
 
-将 `workflows/` 中的 JSON 文件拖入 ComfyUI，配置 API Key（供LLM翻译用）后即可运行。
+#### 3. 下载模型
+
+```bash
+python -m pip install --upgrade huggingface_hub
+
+# VoxCPM2
+hf download openbmb/VoxCPM2 \
+  --local-dir models/voxcpm/VoxCPM2
+
+# MelBandRoFormer（工作流默认引用此文件）
+hf download Kijai/MelBandRoFormer_comfy MelBandRoformer_fp32.safetensors \
+  --local-dir models/diffusion_models/MelBandRoFormer_comfy
+```
+
+VoiceBridge 会在首次运行时自动下载 Qwen3-ASR 和 Qwen3-ForcedAligner，也可以
+提前手动放入 `ComfyUI/models/Qwen3-ASR/`。
+如果显存较小，也可以改为下载 `MelBandRoformer_fp16.safetensors`，并在
+MelBandRoFormer 模型加载节点中重新选择。
+
+#### 4. 启动 ComfyUI 并加载工作流
+
+```bash
+python main.py
+```
+
+打开终端中显示的地址（通常为 `http://127.0.0.1:8188`），将
+`VoiceGate/workflows/VoiceGate-Workflow.json` 拖入画布。在 LLM 节点中配置
+兼容 OpenAI 格式的 API 地址、模型名称和 API Key，上传原始音频与参考音频后即可
+运行。
+
+`VoiceGate-Workflow_api.json` 用于 ComfyUI API 调用，不是浏览器中编辑的工作流。
+
+如果节点显示为红色，请使用 **Manager → Install Missing Custom Nodes** 补装并
+重启 ComfyUI；如果提示模型缺失，请检查模型目录是否与上文一致，并在对应的模型
+加载节点中重新选择。
 
 ## 依赖
 

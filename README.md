@@ -72,27 +72,91 @@ Open the link → Click "Run Now" → Upload video → Select target language �
 
 ### Option 2: Local Deployment
 
-#### 1. Clone the Repository (with submodules)
+> A CUDA-capable NVIDIA GPU is recommended. Use Python 3.12 for the best
+> compatibility with the custom nodes used by this workflow. If you already
+> have a working ComfyUI installation, keep it and start from step 2.
+
+#### 1. Install ComfyUI and clone VoiceGate
 
 ```bash
+mkdir VoiceGate-local && cd VoiceGate-local
+
 git clone --recursive https://github.com/YanTianlong-01/VoiceGate.git
-cd VoiceGate
+git clone https://github.com/comfyanonymous/ComfyUI.git
+
+# macOS / Linux
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+# Windows PowerShell (run these two lines instead)
+# py -3.12 -m venv .venv
+# .venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+python -m pip install -r ComfyUI/requirements.txt
 ```
 
-#### 2. Install ComfyUI & Dependencies
+Keep using the same Python environment for every command below. If you use
+ComfyUI Portable, run dependency commands with its bundled
+`python_embeded/python.exe` and skip virtual-environment creation.
+
+#### 2. Install the required custom nodes
 
 ```bash
-# Install ComfyUI
-git clone https://github.com/comfyanonymous/ComfyUI.git
-cd ComfyUI && pip install -r requirements.txt
+cd ComfyUI/custom_nodes
 
-# Install VoiceBridge plugin
-cp -r ../VoiceGate/comfyui_voicebridge custom_nodes/
+git clone https://github.com/YanTianlong-01/comfyui_voicebridge.git
+git clone https://github.com/RH-RunningHub/ComfyUI_RH_VoxCPM.git
+git clone https://github.com/kijai/ComfyUI-MelBandRoFormer.git
+git clone https://github.com/ltdrdata/ComfyUI-Manager.git comfyui-manager
+
+cd ..
+python -m pip install -r custom_nodes/comfyui_voicebridge/requirements.txt
+python -m pip install -r custom_nodes/ComfyUI_RH_VoxCPM/requirements.txt
+python -m pip install -r custom_nodes/ComfyUI-MelBandRoFormer/requirements.txt
 ```
 
-#### 3. Load Workflows
+The workflow also uses several lightweight utility nodes. Start ComfyUI once,
+load the workflow, then open **Manager → Install Missing Custom Nodes** and
+install the remaining packages (for example rgthree, Easy Use, Comfyroll, and
+AudioTools). Restart ComfyUI after installation.
 
-Drag the JSON files from `workflows/` into ComfyUI, configure your API key (for LLM translation), and hit run.
+#### 3. Download the models
+
+```bash
+python -m pip install --upgrade huggingface_hub
+
+# VoxCPM2
+hf download openbmb/VoxCPM2 \
+  --local-dir models/voxcpm/VoxCPM2
+
+# MelBandRoFormer (the workflow references this exact file)
+hf download Kijai/MelBandRoFormer_comfy MelBandRoformer_fp32.safetensors \
+  --local-dir models/diffusion_models/MelBandRoFormer_comfy
+```
+
+VoiceBridge downloads Qwen3-ASR and Qwen3-ForcedAligner automatically on first
+use. They can also be placed manually under `ComfyUI/models/Qwen3-ASR/`.
+For lower VRAM usage, you may download `MelBandRoformer_fp16.safetensors`
+instead and select it in the MelBandRoFormer loader node.
+
+#### 4. Start ComfyUI and load the workflow
+
+```bash
+python main.py
+```
+
+Open the URL printed in the terminal (normally `http://127.0.0.1:8188`), then
+drag `VoiceGate/workflows/VoiceGate-Workflow.json` onto the canvas. Configure
+the OpenAI-compatible API URL, model name, and API key in the LLM node; upload
+the source audio and reference audio; then queue the workflow.
+
+`VoiceGate-Workflow_api.json` is intended for ComfyUI API clients, not for
+editing in the browser.
+
+If a node is shown in red, use **Manager → Install Missing Custom Nodes** and
+restart ComfyUI. If a model is missing, check that its directory matches the
+path shown above and reselect it in the corresponding loader node.
 
 ## Dependencies
 
@@ -109,5 +173,3 @@ Apache-2.0
 
 - [VoxCPM2](https://github.com/OpenBMB/VoxCPM) — OpenBMB's open-source multilingual TTS model
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) — Visual workflow engine
-
-
