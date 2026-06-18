@@ -1,106 +1,113 @@
-# VoiceGate：跨语言视频智能配音引擎
+# VoiceGate: Cross-Language Video Dubbing Engine
 
-> 基于 VoxCPM2 与 ComfyUI 的跨语言视频翻译配音流水线
 
-## 项目简介
 
-VoiceGate 是基于 VoxCPM2 与 ComfyUI 构建的跨语言视频智能配音引擎。VoxCPM2 支持 30 种语言（含东南亚八国语言）与 9 种中文方言（粤语、四川话、吴语、东北话、闽南语等），具备声音克隆与音色设计能力。引擎通过自研 VoiceBridge 插件实现 TTS 语音与 SRT 字幕时间戳的帧级对齐，确保配音与画面精准同步。
+[中文文档](README_zh.md)
 
-完整链路覆盖 ASR 字幕提取、LLM 翻译、多语言 TTS 到音频对齐合并，节点图可视化编排，开箱即用。
+> A cross-language video translation & dubbing pipeline powered by VoxCPM2 and ComfyUI
 
-[B站效果演示视频【VoiceGate：跨语言视频智能配音引擎】](https://www.bilibili.com/video/BV1sc7C6VE9e/?share_source=copy_web&vd_source=94a8c00ee32b6b955ae0133d5103f92a)
+## Overview
 
-## 应用场景
+VoiceGate is a cross-language video dubbing engine built on VoxCPM2 and ComfyUI. VoxCPM2 supports **30 languages** (including 8 Southeast Asian languages) and **9 Chinese dialects** (Cantonese, Sichuanese, Wu, Northeastern, Hokkien, etc.), with voice cloning and timbre design capabilities. The engine achieves frame-level alignment between TTS audio and SRT subtitle timestamps via the custom-built **VoiceBridge** plugin, ensuring dubbing stays perfectly in sync with the video.
 
-- **内容出海**：中文知识类视频一键翻配为英文、日文、韩文等版本，发布到 YouTube/TikTok
-- **视频引进**：海外 YouTube/B 站内容翻配为中文或方言版本，引进国内
-- **多语言本地化**：纪录片、博物馆讲解、教育内容的多语言版本制作
+The complete pipeline covers ASR subtitle extraction, LLM translation, multilingual TTS, and synchronized audio merging — all visually orchestrated as a drag-and-drop node graph, ready to use out of the box.
 
-## 技术架构
+[Watch the demo on Bilibili (Chinese)](https://www.bilibili.com/video/BV1sc7C6VE9e/?share_source=copy_web&vd_source=94a8c00ee32b6b955ae0133d5103f92a)
 
-![VoiceGate架构图](assets/architecture.drawio.svg)
+## Use Cases
 
-### 核心模块
+- **Content Going Global** — One-click dubbing of Chinese educational/knowledge videos into English, Japanese, Korean, etc., for publishing on YouTube/TikTok
+- **Content Importing** — Dubbing overseas YouTube/Bilibili content into Chinese or regional dialects for the domestic market
+- **Multilingual Localization** — Producing multi-language versions of documentaries, museum guides, and educational materials
 
-| 模块 | 说明 |
-|------|------|
-| VoiceBridge ASR | 基于 Qwen3-ASR 的语音转字幕，支持 forced alignment |
-| LLM 翻译 | 字幕翻译（支持自定义 prompt 与模型） |
-| VoxCPM2 TTS | 30 语言 + 9 方言，声音克隆与音色设计 |
-| VoiceBridge SRT 对齐 | TTS 语音与 SRT 时间戳帧级对齐合并 |
-| MelBandRoFormer | 人声分离，支持保留环境音 |
+## Architecture
 
-## 核心创新
+![VoiceGate Architecture](assets/architecture_en.drawio.svg)
 
-**VoiceBridge 插件**（[GitHub](https://github.com/YanTianlong-01/comfyui_voicebridge)）是本项目核心贡献，首次将 SRT 字幕时间戳驱动的多语言 TTS 对齐引入 ComfyUI 可视化工作流：
+### Core Modules
 
-- `VoiceBridgeAudioListMergerBySRT`：TTS 生成的逐句音频严格按字幕时间轴合并
-- `VoiceBridgeSRTSplitter`：SRT 字幕按时间戳拆分，驱动 TTS 逐句生成
-- `VoiceBridgeASRTranscribe`：ASR 转录 + forced alignment，输出带时间戳的 SRT
-- 解决传统 AI 配音"音画脱节"的痛点，实现配音与原片节奏帧级同步
+| Module | Description |
+|--------|-------------|
+| VoiceBridge ASR | Speech-to-subtitle via Qwen3-ASR with forced alignment |
+| LLM Translation | Subtitle translation with customizable prompt & model |
+| VoxCPM2 TTS | 30 languages + 9 dialects, voice cloning & timbre design |
+| VoiceBridge SRT Alignment | Frame-level merging of TTS audio with SRT timestamps |
+| MelBandRoFormer | Vocal separation with optional ambient sound preservation |
 
-## 项目结构
+## Key Innovation
+
+The **VoiceBridge plugin** ([GitHub](https://github.com/YanTianlong-01/comfyui_voicebridge)) is the core contribution of this project — the first to bring SRT-timestamp-driven multilingual TTS alignment into ComfyUI's visual workflow:
+
+- `VoiceBridgeAudioListMergerBySRT` — Merges per-sentence TTS audio strictly aligned to subtitle timelines
+- `VoiceBridgeSRTSplitter` — Splits SRT subtitles by timestamp to drive per-sentence TTS generation
+- `VoiceBridgeASRTranscribe` — ASR transcription with forced alignment, outputting time-stamped SRT
+- Solves the classic "audio-video desync" pain point in AI dubbing, achieving frame-level synchronization
+
+## Project Structure
 
 ```
 VoiceGate/
-├── comfyui_voicebridge/  # VoiceBridge ComfyUI 插件 (git submodule)
-├── workflows/             # ComfyUI 工作流 JSON
-├── README.md              # 本文件
+├── comfyui_voicebridge/  # VoiceBridge ComfyUI plugin (git submodule)
+├── workflows/             # ComfyUI workflow JSON files
+├── README.md              # This file (English)
+├── README_zh.md           # 中文文档 (Chinese documentation)
 └── LICENSE
 ```
 
-## 快速开始
+## Quick Start
 
-### 方式一：在线体验（推荐）
+### Option 1: Try Online (Recommended)
 
-无需本地部署，直接在浏览器中开箱即用：
+No local setup needed — just open in your browser:
 
-👉 [在线应用（音频版）](https://www.runninghub.cn/ai-detail/2062442306350964737?inviteCode=rh-v1455)
-👉 [在线应用（视频版）](https://www.runninghub.cn/ai-detail/2062446982618238978?inviteCode=rh-v1455)
+👉 [Online App (Audio)](https://www.runninghub.cn/ai-detail/2062442306350964737?inviteCode=rh-v1455)
+👉 [Online App (Video)](https://www.runninghub.cn/ai-detail/2062446982618238978?inviteCode=rh-v1455)
 
-👉 [ComfyUI 在线工作流（音频版）](https://www.runninghub.cn/post/2062432233125928961?inviteCode=rh-v1455)
-👉 [ComfyUI 在线工作流（视频版）](https://www.runninghub.cn/post/2062445363042283522?inviteCode=rh-v1455)
+👉 [ComfyUI Online Workflow (Audio)](https://www.runninghub.cn/post/2062432233125928961?inviteCode=rh-v1455)
+👉 [ComfyUI Online Workflow (Video)](https://www.runninghub.cn/post/2062445363042283522?inviteCode=rh-v1455)
 
-👉 [Huggingface 在线应用体验](https://huggingface.co/spaces/build-small-hackathon/VoiceGate)
+👉 [Hugging Face Space](https://huggingface.co/spaces/build-small-hackathon/VoiceGate)
 
-打开链接 → 点击"立即运行" → 上传视频 → 选择目标语言 → 一键生成配音
+Open the link → Click "Run Now" → Upload video → Select target language → Generate dubbing
 
-### 方式二：本地部署
+### Option 2: Local Deployment
 
-#### 1. 克隆仓库（含子模块）
+#### 1. Clone the Repository (with submodules)
 
 ```bash
 git clone --recursive https://github.com/YanTianlong-01/VoiceGate.git
 cd VoiceGate
 ```
 
-#### 2. 安装 ComfyUI 与依赖
+#### 2. Install ComfyUI & Dependencies
 
 ```bash
-# 安装 ComfyUI
+# Install ComfyUI
 git clone https://github.com/comfyanonymous/ComfyUI.git
 cd ComfyUI && pip install -r requirements.txt
 
-# 安装 VoiceBridge 插件
+# Install VoiceBridge plugin
 cp -r ../VoiceGate/comfyui_voicebridge custom_nodes/
 ```
 
-#### 3. 加载工作流
+#### 3. Load Workflows
 
-将 `workflows/` 中的 JSON 文件拖入 ComfyUI，配置 API Key（供LLM翻译用）后即可运行。
+Drag the JSON files from `workflows/` into ComfyUI, configure your API key (for LLM translation), and hit run.
 
-## 依赖
+## Dependencies
 
 - ComfyUI
-- VoxCPM2 (通过 ComfyUI_RH_VoxCPM 节点)
+- VoxCPM2 (via ComfyUI_RH_VoxCPM nodes)
 - Qwen3-ASR / Qwen3-ForcedAligner
 - MelBandRoFormer
 
-## 许可证
+## License
 
 Apache-2.0
 
-## 鸣谢
+## Acknowledgements
 
-- [VoxCPM2](https://github.com/OpenBMB/VoxCPM) — OpenBMB 开源多语言 TTS 模型
-- [ComfyUI](https://github.com/comfyanonymous/ComfyUI) — 可视化工作流引擎
+- [VoxCPM2](https://github.com/OpenBMB/VoxCPM) — OpenBMB's open-source multilingual TTS model
+- [ComfyUI](https://github.com/comfyanonymous/ComfyUI) — Visual workflow engine
+
+
