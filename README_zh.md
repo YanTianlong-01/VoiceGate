@@ -56,15 +56,14 @@ VoiceGate/
 
 无需本地部署，直接在浏览器中开箱即用：
 
+👉 [在线网页 (推荐)](https://voicegate.netlify.app)
+
 👉 [在线应用（音频版）](https://www.runninghub.cn/ai-detail/2062442306350964737?inviteCode=rh-v1455)
 👉 [在线应用（视频版）](https://www.runninghub.cn/ai-detail/2062446982618238978?inviteCode=rh-v1455)
 
 👉 [ComfyUI 在线工作流（音频版）](https://www.runninghub.cn/post/2062432233125928961?inviteCode=rh-v1455)
 👉 [ComfyUI 在线工作流（视频版）](https://www.runninghub.cn/post/2062445363042283522?inviteCode=rh-v1455)
 
-👉 [Huggingface 在线应用体验](https://huggingface.co/spaces/build-small-hackathon/VoiceGate)
-
-打开链接 → 点击"立即运行" → 上传视频 → 选择目标语言 → 一键生成配音
 
 ### 方式二：本地部署
 

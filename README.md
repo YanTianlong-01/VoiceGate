@@ -60,15 +60,14 @@ VoiceGate/
 
 No local setup needed — just open in your browser:
 
+👉 [Online Web (Recommended)](https://voicegate.netlify.app)
+
 👉 [Online App (Audio)](https://www.runninghub.cn/ai-detail/2062442306350964737?inviteCode=rh-v1455)
 👉 [Online App (Video)](https://www.runninghub.cn/ai-detail/2062446982618238978?inviteCode=rh-v1455)
 
 👉 [ComfyUI Online Workflow (Audio)](https://www.runninghub.cn/post/2062432233125928961?inviteCode=rh-v1455)
 👉 [ComfyUI Online Workflow (Video)](https://www.runninghub.cn/post/2062445363042283522?inviteCode=rh-v1455)
 
-👉 [Hugging Face Space](https://huggingface.co/spaces/build-small-hackathon/VoiceGate)
-
-Open the link → Click "Run Now" → Upload video → Select target language → Generate dubbing
 
 ### Option 2: Local Deployment
 
