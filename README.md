@@ -1,3 +1,5 @@
+
+
 # VoiceGate: Cross-Language Video Dubbing Engine
 
 
@@ -147,8 +149,9 @@ python main.py
 
 Open the URL printed in the terminal (normally `http://127.0.0.1:8188`), then
 drag `VoiceGate/workflows/VoiceGate-Workflow.json` onto the canvas. Configure
-the OpenAI-compatible API URL, model name, and API key in the LLM node; upload
-the source audio and reference audio; then queue the workflow.
+the OpenAI-compatible API URL, model name, and API key in the LLM node; set the
+target language in the `easy string` node (default is `English`); upload the
+source audio and reference audio; then queue the workflow.
 
 `VoiceGate-Workflow_api.json` is intended for ComfyUI API clients, not for
 editing in the browser.
